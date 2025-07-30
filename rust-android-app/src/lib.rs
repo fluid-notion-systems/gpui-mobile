@@ -1,14 +1,18 @@
-pub fn add(left: u64, right: u64) -> u64 {
-    left + right
+use jni::objects::JClass;
+use jni::JNIEnv;
+
+#[no_mangle]
+pub extern "system" fn Java_com_example_rustapp_NativeLib_hello(_env: JNIEnv, _class: JClass) {
+    android_logger::init_once(
+        android_logger::Config::default().with_max_level(log::LevelFilter::Debug),
+    );
+    log::info!("Hello from Rust!");
 }
 
 #[cfg(test)]
 mod tests {
-    use super::*;
-
     #[test]
     fn it_works() {
-        let result = add(2, 2);
-        assert_eq!(result, 4);
+        assert_eq!(2 + 2, 4);
     }
 }
