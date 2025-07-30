@@ -28,7 +28,7 @@ captures/
 out/
 
 # Vendor directory (contains submodules)
-vendor/
+# Note: Submodules are tracked by git, so we don't ignore the vendor directory
 
 # IDE
 .vscode/

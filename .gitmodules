@@ -1,0 +1,6 @@
+[submodule "vendor/blade"]
+	path = vendor/blade
+	url = https://github.com/kvark/blade.git
+[submodule "vendor/zed"]
+	path = vendor/zed
+	url = https://github.com/zed-industries/zed.git
